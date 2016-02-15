@@ -1,0 +1,95 @@
+/*MAIN HOMEPAGE*/
+
+header {
+	width: 100%;
+	opacity: 0.6;
+}
+
+header nav {
+	max-width: 960px;
+	margin: 0 auto;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+
+header nav ul {
+	height: 50px;
+	line-height:50px;
+}
+
+header nav ul li {
+	display: inline;
+	list-style-type: none;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 10px;
+	font-family: arial;
+	text-decoration: none;
+	float: right;
+}
+
+a:link { color: #000000; text-decoration: none}
+a:visited { color: #000000; text-decoration: none}
+a:hover { color: #3366CC; text-decoration: underline}
+a:active { color: #000000; text-decoration: none}
+
+
+#home {
+	padding: 20px;
+	font-family: 'Syncopate', sans-serif;
+	font-size: 3.5em;
+	text-align: center;
+	color: #797f8b;
+}
+
+.homepics {
+	width: 402px;
+	height: 350px;
+}
+
+#picroll {
+	text-align: center;
+}
+
+#info {
+	font-family: 'Happy Monkey', cursive;
+	font-size: 1.5em;
+	text-align: center;
+	color: rgba(84, 82, 83, 0.407843);
+}
+
+
+/*ADD IDEA PAGE*/
+
+#newactivity {
+	background: url('http://dtlate.ch/wp-content/uploads/2015/08/coffee_Dollarphotoclub_73794548-medium.jpg');
+}
+
+#undernewtitle {
+	font-size: 1.5em;
+	font-family: arial;
+}
+
+#newtitle {
+	font-family: 'Syncopate', sans-serif;
+	text-align: center;
+	color: #EFEEAF;
+	font-size: 3em;
+}
+
+.newnew {
+	font-family: 'Syncopate', sans-serif;
+	color: white;
+
+}
+
+.sfpic {
+	padding-top: 50px;
+	background-color: rgba(84, 82, 83, 0.407843);
+	text-align: center;
+	width: 600px;
+	height: 500px;
+	clear: both;
+	margin: 50px 0px 50px 200px;
+}

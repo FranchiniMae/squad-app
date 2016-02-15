@@ -1,0 +1,32 @@
+<h2>your squad's ideas</h2>
+
+<a href="/ideas/new">Add Idea</a>
+
+
+<div class="ideas">
+<% @ideas.each do |idea| %>
+    <div class="row">
+      <ul>
+        <li>
+          <h2>
+            <a href="/ideas/<%= idea.id %>">
+            <%= idea.activity %>
+            </a>
+          </h2>
+        </li>
+        <li>
+          <a href="/ideas/<%= idea.id %>/edit">
+          Edit
+          </a>
+        </li>
+        <li>
+          <li>
+            <form method="/ideas/<%= idea.id %>/delete" action="post">
+            <button>Delete</button>
+            </form>
+           </li> 
+          </li>
+        </ul>
+      </div>
+  <% end %>
+</div>
