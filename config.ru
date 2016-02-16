@@ -8,4 +8,5 @@ require './models/idea'
 #CONTROLLERS
 require './app'
 
+use Rack::MethodOverride
 run SquadApp

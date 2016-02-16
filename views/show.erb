@@ -1,9 +1,13 @@
-<%= @idea.date %>
-<%= @idea.activity %>
-<%= @idea.place %>
-<%= @idea.cost %>
+<h2 id="current">SQUAD SUGGESTION</h2>
 
-<form action="/ideas/ <%= @idea.id %>" method="post" class="delete">
-	<input type="hidden" name="_method" value="delete">
-	<input type="submit" value="Delete">
-</form>
+<div id="singleidea">
+	<b>Date:</b> <%= @idea.date %><br>
+	<b>Activity:</b> <%= @idea.activity %><br>
+	<b>Place:</b> <%= @idea.place %><br>
+	<b>Cost:</b> <%= @idea.cost %><br><br>
+
+	<form action="/ideas/ <%= @idea.id %>" method="post" class="delete">
+		<input type="hidden" name="_method" value="delete">
+		<input type="submit" value="Delete">
+	</form>
+</div>

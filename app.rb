@@ -21,11 +21,11 @@ class SquadApp < Sinatra::Base
 	post '/ideas' do
 		@idea = Idea.create(params[:idea])
 		@idea.save
-		redirect("/ideas")
+		redirect("/ideas/#{@ideas.id}")
 	end
 	#took out "s" from @idea
 
-	#show
+		#show
 	get '/ideas/:id' do
 		@idea = Idea.find(params[:id])
 		erb(:"show")
@@ -38,23 +38,20 @@ class SquadApp < Sinatra::Base
 	end
 
 	#update
-	put 'ideas/:id' do
+	patch '/ideas/:id' do
 		@idea = Idea.find(params[:id])
 		if @idea.update_attributes(params[:idea])
-			redirect('/ideas/#{idea.id}')
+			redirect("/ideas/#{@idea.id}")
 		else
 			erb(:"ideas/edit")
 		end
 	end 
 
 	#delete
-	delete '/ideas/:id/delete' do
+	delete '/ideas/:id' do
 		@idea = Idea.find(params[:id])
-		if @idea.destroy
-		  redirect("/ideas")
-		else 
-		  redirect("/ideas/#{@idea.id}")
-		end 
+		@idea.destroy
+		redirect('/ideas')
 	end
 
 end

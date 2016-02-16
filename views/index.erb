@@ -1,32 +1,26 @@
-<h2>your squad's ideas</h2>
+  
+<div class="currentideas">
 
-<a href="/ideas/new">Add Idea</a>
+  <h2 class="jumbotron" id="current">Current Squad Suggestions</h2>
 
-
-<div class="ideas">
-<% @ideas.each do |idea| %>
-    <div class="row">
-      <ul>
-        <li>
-          <h2>
-            <a href="/ideas/<%= idea.id %>">
-            <%= idea.activity %>
-            </a>
-          </h2>
-        </li>
-        <li>
-          <a href="/ideas/<%= idea.id %>/edit">
-          Edit
-          </a>
-        </li>
-        <li>
+  <div class="ideas">
+  <% @ideas.each do |idea| %>
+      <div class="row">
+        <ul>
           <li>
-            <form method="/ideas/<%= idea.id %>/delete" action="post">
-            <button>Delete</button>
-            </form>
-           </li> 
+          <br>
+            <p id="listidea">
+              <a href="/ideas/<%= idea.id %>" style="color: #CC0000">
+                <%= idea.activity %>
+              </a>
+            </p>
           </li>
-        </ul>
-      </div>
-  <% end %>
+            <a href="/ideas/<%= idea.id %>/edit">
+            EDIT</a><Br>
+            <a href="ideas/<%= idea.id %>">DELETE</a>
+          </ul>
+        </div>
+    <% end %>
+  </div>
+
 </div>

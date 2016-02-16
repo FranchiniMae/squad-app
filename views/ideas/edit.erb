@@ -1,13 +1,20 @@
-<h3>Edit Activity</h3>
+ <h2 id="current">Edit Activity</h2>
 
-<form action='/ideas/<%= "#{@idea.id}" %>' method="post">
-	<label for="idea[date]">Date:</label><input name="idea[date]" value='<%= "#{@idea.date}" %>'>
-
-	<label for="idea[activity]">Activity:</label><input name="idea[activity]" value='<%= "#{@idea.activity}" %>'>
-
-	<label for="idea[place]">Place:</label><input name="idea[place]" value='<%= "#{@idea.place}" %>'>
-
-	<label for="idea[cost]">Cost:</label><input name="idea[cost]" value='<%= "#{@idea.cost}" %>'>
-
-	<input type="submit" value="Create">
+<form class="newnew" action='/ideas/<%= "#{@idea.id}" %>' method="post">
+	<label for="idea[date]">Date: </label><input name="idea[date]" value='<%= "#{@idea.date}" %>'>
+	<br>
+	<br>
+	<label for="idea[activity]">Activity: </label><input name="idea[activity]" value='<%= "#{@idea.activity}" %>'>
+	<br>
+	<br>
+	<label for="idea[place]">Place: </label><input name="idea[place]" value='<%= "#{@idea.place}" %>'>
+	<br>
+	<br>
+	<label for="idea[cost]">Cost: </label><input name="idea[cost]" value='<%= "#{@idea.cost}" %>'>
+	<br>
+	<br>
+	<input type="hidden" name="_method" value="patch">
+	<input type="submit" value="EDIT">
+	<br>
+	<br>
 </form>
